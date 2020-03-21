@@ -25,7 +25,7 @@ const Overview = ({
           <div className='level-item has-text-centered'>
             <div>
               <p className='heading'>Confirmed</p>
-              <p className='title is-size-5-mobile'>
+              <p className='title is-size-4-mobile'>
                 {numberFormatter(confirmed.value)}
               </p>
             </div>
@@ -33,7 +33,7 @@ const Overview = ({
           <div className='level-item has-text-centered'>
             <div>
               <p className='heading'>Recovered</p>
-              <p className='title is-size-5-mobile'>
+              <p className='title is-size-4-mobile'>
                 {numberFormatter(recovered.value)}
               </p>
             </div>
@@ -41,7 +41,7 @@ const Overview = ({
           <div className='level-item has-text-centered'>
             <div>
               <p className='heading'>Deaths</p>
-              <p className='title is-size-5-mobile'>
+              <p className='title is-size-4-mobile'>
                 {numberFormatter(deaths.value)}
               </p>
             </div>
@@ -60,7 +60,7 @@ const Overview = ({
         <div className='level-item has-text-centered'>
           <div>
             <p className='heading'>Confirmed</p>
-            <p className='title is-size-5-mobile'>
+            <p className='title is-size-4-mobile'>
               {numberFormatter(confirmed.value)}
             </p>
           </div>
@@ -68,7 +68,7 @@ const Overview = ({
         <div className='level-item has-text-centered'>
           <div>
             <p className='heading'>Recovered</p>
-            <p className='title is-size-5-mobile'>
+            <p className='title is-size-4-mobile'>
               {numberFormatter(recovered.value)}
             </p>
           </div>
@@ -76,7 +76,7 @@ const Overview = ({
         <div className='level-item has-text-centered'>
           <div>
             <p className='heading'>Deaths</p>
-            <p className='title is-size-5-mobile'>
+            <p className='title is-size-4-mobile'>
               {numberFormatter(deaths.value)}
             </p>
           </div>
