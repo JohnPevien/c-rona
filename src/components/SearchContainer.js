@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import SearchBar from './SearchBar'
 import ResultsOveriew from './shared/ResultsOverview'
+import Loader from './shared/Loader'
 
 export class SearchContainer extends Component {
   constructor() {
@@ -11,6 +12,7 @@ export class SearchContainer extends Component {
       countries: null,
       countryData: null,
       country: '',
+      isLoading: false,
     }
   }
 
@@ -25,13 +27,16 @@ export class SearchContainer extends Component {
 
   fetchCountryData = async country => {
     try {
+      this.setState({ isLoading: true })
       const res = await axios.get(
         `https://covid19.mathdro.id/api/countries/${country}`
       )
       this.setState({ countryData: res.data })
+      this.setState({ isLoading: false })
     } catch (e) {
       console.error('No data for selected country')
       this.setState({ countryData: null })
+      this.setState({ isLoading: false })
     }
   }
 
@@ -47,11 +52,10 @@ export class SearchContainer extends Component {
     return Object.keys(countries).find(key => countries[key] === countryCode)
   }
 
-  renderContent = () => {
-    const { countries, countryData, country } = this.state
+  renderSearchbar = () => {
+    const { countries } = this.state
 
-    if (countries && countryData) {
-      const countryName = this.getCountryName(country)
+    if (countries) {
       return (
         <>
           <div style={{ marginBottom: '1rem' }}>
@@ -60,42 +64,52 @@ export class SearchContainer extends Component {
               onSelectChange={this.handleCountryChange}
             />
           </div>
+        </>
+      )
+    }
+    return <></>
+  }
 
+  renderOverview = () => {
+    const { countryData, country, isLoading } = this.state
+
+    if (isLoading) {
+      return (
+        <div className='content has-text-centered'>
+          <Loader />
+        </div>
+      )
+    }
+
+    if (countryData) {
+      const countryName = this.getCountryName(country)
+      return (
+        <>
           <ResultsOveriew overview={countryData} title={countryName} />
         </>
       )
     }
+
     if (country && !countryData) {
       return (
         <>
-          <div style={{ marginBottom: '1rem' }}>
-            <SearchBar
-              countries={countries}
-              onSelectChange={this.handleCountryChange}
-            />
-          </div>
           <div className='has-text-centered'>
             <p className='is-size-2 is-size-4-mobile'>No data</p>
           </div>
         </>
       )
     }
-    if (countries) {
-      return (
-        <>
-          <SearchBar
-            countries={countries}
-            onSelectChange={this.handleCountryChange}
-          />
-        </>
-      )
-    }
 
-    return <>Loading..</>
+    return <></>
   }
 
   render() {
-    return <div>{this.renderContent()}</div>
+    return (
+      <div>
+        {this.renderSearchbar()}
+        {this.renderOverview()}
+      </div>
+    )
   }
 }
 
