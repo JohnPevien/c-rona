@@ -2,4 +2,5 @@
 
 🦠 Monitoring app using ReactJs
 
+See it [here](https://c-rona.netlify.com/)
 Data source: [COVID-19-API](https://github.com/mathdroid/covid-19-api)
