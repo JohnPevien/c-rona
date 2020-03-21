@@ -2,15 +2,22 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='footer has-background-light'>
+    <footer className='footer has-background-black has-text-white'>
       <div className='content has-text-centered'>
         <p>
-          <strong>C-RONA</strong> by{' '}
-          <a href='https://github.com/JohnPevien'>John Pevien Laguindam</a>
+          C-RONA by{' '}
+          <a className='has-text-grey' href='https://github.com/JohnPevien'>
+            John Pevien Laguindam
+          </a>
         </p>
         <p>
-          <strong>Data Source: </strong>
-          <a href='https://github.com/mathdroid/covid-19-api'>covid-19-api</a>
+          Data Source:{' '}
+          <a
+            className='has-text-grey'
+            href='https://github.com/mathdroid/covid-19-api'
+          >
+            covid-19-api
+          </a>
         </p>
       </div>
     </footer>

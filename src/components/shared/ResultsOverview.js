@@ -14,6 +14,16 @@ const Overview = ({
     return new Date(date).toDateString()
   }
 
+  const getRecoveryRate = () => {
+    const recoveryRate = (recovered.value / confirmed.value) * 100
+    return recoveryRate.toFixed(2)
+  }
+
+  const getFatalityRate = () => {
+    const fatalityRate = (deaths.value / confirmed.value) * 100
+    return fatalityRate.toFixed(2)
+  }
+
   if (showDate) {
     return (
       <>
@@ -82,6 +92,16 @@ const Overview = ({
           </div>
         </div>
       </nav>
+      <article className='message is-dark has-text-black'>
+        <div className='message-body has-text-centered'>
+          <p>
+            <strong>Recovery Rate: {getRecoveryRate()}%</strong>
+          </p>
+          <p>
+            <strong>Fatality Rate: {getFatalityRate()}%</strong>
+          </p>
+        </div>
+      </article>
     </>
   )
 }

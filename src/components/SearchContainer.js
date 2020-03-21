@@ -83,6 +83,7 @@ export class SearchContainer extends Component {
 
     if (countryData) {
       const countryName = this.getCountryName(country)
+      console.log(countryData)
       return (
         <>
           <ResultsOveriew overview={countryData} title={countryName} />

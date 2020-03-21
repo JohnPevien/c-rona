@@ -13,6 +13,10 @@ const App = () => (
     <Header />
     <section className='section'>
       <OverviewContainer />
+      <div className='content'>
+        <div className='is-divider' data-content='test' />
+      </div>
+
       <SearchContainer />
     </section>
     <Footer />
