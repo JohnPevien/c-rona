@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import Overview from './Overview'
+import ResultsOverview from './shared/ResultsOverview'
 
 class OverviewContainer extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class OverviewContainer extends Component {
     if (overview) {
       return (
         <>
-          <Overview overview={overview} />
+          <ResultsOverview overview={overview} showDate title='Overview' />
         </>
       )
     }

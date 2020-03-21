@@ -10,7 +10,7 @@ const Header = () => {
       >
         <div className='navbar-brand'>
           <a className='navbar-item' href='/'>
-            <p className='title is-2 has-text-primary'>C-RONA</p>
+            <p className='title is-2 has-text-white'>C-RONA</p>
           </a>
         </div>
       </nav>
