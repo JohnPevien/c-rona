@@ -9,7 +9,7 @@ const Footer = () => {
           <a href='https://github.com/JohnPevien'>John Pevien Laguindam</a>
         </p>
         <p>
-          <strong>Powered by: </strong>
+          <strong>Data Source: </strong>
           <a href='https://github.com/mathdroid/covid-19-api'>covid-19-api</a>
         </p>
       </div>
