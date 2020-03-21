@@ -5,13 +5,13 @@ const Footer = () => {
     <footer className='footer has-background-black has-text-white'>
       <div className='content has-text-centered'>
         <p>
-          C-RONA by{' '}
+          <b>C-RONA by</b>{' '}
           <a className='has-text-grey' href='https://github.com/JohnPevien'>
             John Pevien Laguindam
           </a>
         </p>
         <p>
-          Data Source:{' '}
+          <b>Data Source:</b>{' '}
           <a
             className='has-text-grey'
             href='https://github.com/mathdroid/covid-19-api'
