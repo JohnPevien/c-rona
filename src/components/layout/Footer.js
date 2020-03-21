@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='footer has-background-white'>
+    <footer className='footer has-background-light'>
       <div className='content has-text-centered'>
         <p>
           <strong>C-RONA</strong> by{' '}

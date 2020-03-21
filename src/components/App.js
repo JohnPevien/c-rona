@@ -9,7 +9,7 @@ import OverviewContainer from './OverviewContainer'
 import SearchContainer from './SearchContainer'
 
 const App = () => (
-  <div className='container has-background-light'>
+  <div className='container has-background-white'>
     <Header />
     <section className='section'>
       <OverviewContainer />
