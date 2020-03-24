@@ -10,7 +10,7 @@ import SearchContainer from './SearchContainer'
 
 const App = () => (
   <div className='container has-background-white has-text-black'>
-    <Header />
+    {/* <Header />
     <section className='section'>
       <OverviewContainer />
       <div className='content'>
@@ -19,7 +19,8 @@ const App = () => (
 
       <SearchContainer />
     </section>
-    <Footer />
+    <Footer /> */}
+    Under maintenance..
   </div>
 )
 
