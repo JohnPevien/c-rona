@@ -45,13 +45,6 @@ export class SearchContainer extends Component {
     this.fetchCountryData(country)
   }
 
-  getCountryName = countryCode => {
-    const {
-      countries: { countries },
-    } = this.state
-    return Object.keys(countries).find(key => countries[key] === countryCode)
-  }
-
   renderSearchbar = () => {
     const { countries } = this.state
 
@@ -82,11 +75,9 @@ export class SearchContainer extends Component {
     }
 
     if (countryData) {
-      const countryName = this.getCountryName(country)
-      console.log(countryData)
       return (
         <>
-          <ResultsOveriew overview={countryData} title={countryName} />
+          <ResultsOveriew overview={countryData} title={country} />
         </>
       )
     }

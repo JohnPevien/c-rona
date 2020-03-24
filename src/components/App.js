@@ -5,12 +5,12 @@ import '../style.css'
 
 import Header from './layout/Header'
 import Footer from './layout/Footer'
-import OverviewContainer from './OverviewContainer'
 import SearchContainer from './SearchContainer'
+import OverviewContainer from './OverviewContainer'
 
 const App = () => (
   <div className='container has-background-white has-text-black'>
-    {/* <Header />
+    <Header />
     <section className='section'>
       <OverviewContainer />
       <div className='content'>
@@ -19,8 +19,7 @@ const App = () => (
 
       <SearchContainer />
     </section>
-    <Footer /> */}
-    Under maintenance..
+    <Footer />
   </div>
 )
 

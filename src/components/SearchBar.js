@@ -6,23 +6,25 @@ const SearchBar = props => {
     const {
       countries: { countries },
     } = props
-    const countryLabels = Object.keys(countries)
-    const countryValues = Object.values(countries)
+
+    const countryLabels = Object.entries(countries).map(
+      country => country[1].name
+    )
     const options = []
 
     for (let i = 0; i < countryLabels.length; i += 1) {
       const option = {
         label: countryLabels[i],
-        value: countryValues[i],
+        value: countryLabels[i],
       }
       options.push(option)
     }
     return options
   }
 
-  const handleSelectChange = ({ value }) => {
+  const handleSelectChange = ({ label }) => {
     const { onSelectChange } = props
-    onSelectChange(value)
+    onSelectChange(label)
   }
 
   return (

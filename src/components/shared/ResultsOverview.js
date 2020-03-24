@@ -99,6 +99,9 @@ const Overview = ({
       <article className='message is-dark has-text-black'>
         <div className='message-body has-text-centered'>
           <p>
+            <em>*Note: This not reflect the most recent data.</em>
+          </p>
+          <p>
             <strong>Recovery Rate: {getRecoveryRate()}%</strong>
           </p>
           <p>
