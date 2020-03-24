@@ -1,5 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
+import makeAnimated from 'react-select/animated'
 
 const SearchBar = props => {
   const getCountryOptions = () => {
@@ -21,6 +22,7 @@ const SearchBar = props => {
     }
     return options
   }
+  const animatedComponents = makeAnimated()
 
   const handleSelectChange = ({ label }) => {
     const { onSelectChange } = props
@@ -34,6 +36,7 @@ const SearchBar = props => {
           options={getCountryOptions()}
           onChange={e => handleSelectChange(e)}
           placeholder='Search by country...'
+          components={animatedComponents}
         />
       </div>
     </div>

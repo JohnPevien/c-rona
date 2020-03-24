@@ -25,7 +25,7 @@ class OverviewContainer extends Component {
     if (overview) {
       return (
         <>
-          <ResultsOverview overview={overview} showDate title='Overview' />
+          <ResultsOverview overview={overview} isOverview title='Overview' />
         </>
       )
     }
