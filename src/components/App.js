@@ -18,7 +18,13 @@ const App = () => (
       </div>
 
       <SearchContainer />
+      <div className='has-text-centered' style={{ marginTop: '1.5rem' }}>
+        <p className='is-size-5 is-size-6-mobile'>
+          <em>*Note: This might not display the most recent data</em>
+        </p>
+      </div>
     </section>
+
     <Footer />
   </div>
 )
